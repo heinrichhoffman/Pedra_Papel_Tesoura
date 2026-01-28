@@ -25,7 +25,7 @@ while True:
 
 
   vence = {
-
+      
           "pedra"  :    "tesoura",
           "tesoura":    "papel",
           "papel"  :    "pedra"
@@ -46,26 +46,27 @@ while True:
       print("----------------")
       print('Jogador 1 venceu')
       print("----------------")
-      placar_p1 += 1
+      placar_p1 += 1 
 
     else:
-      print("----------------")
+      print("----------------") 
       print('Jogador 2 venceu')
       print("----------------")
       placar_p2 += 1
 
     print('Jogador 1:', player_1, '\nJogador 2:', player_2)
 
-  else:
-    print('Alguém digitou uma opção que não existe')
+  else: 
+    print('Alguém digitou uma opção que não existe')   
 
   continuar = input("Jogar novamente: 1\nEncerrar: 2\n")
 
   if continuar ==  '2':
 
     print("------ JOGO ENCERRADO ------")
-    print(f'      Placar final:         \n Jogador 1: {placar_p1} \n Jogador 2: {placar_p2}')
+    print(f'      Placar final:         \n Jogador 1: {placar_p1} \n Jogador 2: {placar_p2}\n Empate: {placar_empate}')
 
 
 
     break
+
