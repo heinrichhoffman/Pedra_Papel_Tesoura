@@ -12,29 +12,22 @@ placar_p1 = 0
 placar_p2 = 0
 placar_empate = 0
 
-while True:
+jogadas = ['pedra', 'papel', 'tesoura']
 
-  jogadas1 = ['pedra', 'papel', 'tesoura']
-  jogadas2 = ['pedra', 'papel', 'tesoura']
-
-
-  player_1 = getpass.getpass(f'Jogador 1: {jogadas1[0]}, {jogadas1[1]} ou {jogadas1[2]}' ).lower().strip()
-  player_2 = getpass.getpass(f'Jogador 2: {jogadas2[0]}, {jogadas2[1]} ou {jogadas2[2]}' ).lower().strip()
-
-
-
-
-  vence = {
+vence = {
       
           "pedra"  :    "tesoura",
           "tesoura":    "papel",
           "papel"  :    "pedra"
 
+}
 
-  }
+while True:
 
+  player_1 = getpass.getpass(f'Jogador 1: {jogadas[0]}, {jogadas[1]} ou {jogadas[2]}' ).lower().strip()
+  player_2 = getpass.getpass(f'Jogador 2: {jogadas[0]}, {jogadas[1]} ou {jogadas[2]}' ).lower().strip()
 
-  if player_1 in jogadas1 and player_2 in jogadas2:
+  if player_1 and player_2 in jogadas:
 
     if player_1 == player_2:
 
@@ -59,14 +52,12 @@ while True:
   else: 
     print('Alguém digitou uma opção que não existe')   
 
-  continuar = input("Jogar novamente: 1\nEncerrar: 2\n")
+  continuar = input("Jogar novamente: Digite qualquer tecla \nEncerrar: 0\n")
 
-  if continuar ==  '2':
+  if continuar ==  '0':
 
     print("------ JOGO ENCERRADO ------")
     print(f'      Placar final:         \n Jogador 1: {placar_p1} \n Jogador 2: {placar_p2}\n Empate: {placar_empate}')
-
-
 
     break
 
